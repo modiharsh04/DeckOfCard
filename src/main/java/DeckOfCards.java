@@ -1,5 +1,4 @@
 import java.util.*;
-import java.security.SecureRandom;
 
 public class DeckOfCards{
 	public static final int DECK_SIZE = 52;
@@ -12,14 +11,10 @@ public class DeckOfCards{
 	}
 
 	private List<Card> cards;
-	private int currentSize;
-	private SecureRandom random;
+	private int currentCard = 0;
 
 	private DeckOfCards(){
 		cards = new ArrayList<>(DECK_SIZE);
-		this.currentSize = DECK_SIZE-1;
-		this.random = new SecureRandom();
-		
 		this.createDeck();
 	}
 
@@ -34,17 +29,14 @@ public class DeckOfCards{
 
 	void shuffle(){
 		Collections.shuffle(this.cards);
-		this.currentSize = DECK_SIZE-1;
+		this.currentCard = 0;
 		System.out.println("Deck shuffled...");
 	}
 
 	Card dealOneCard(){
 		Card card = null;
-		if (currentSize >=0 ){
-			int cardNo = random.nextInt(this.currentSize-1);
-			card = this.cards.get(cardNo);
-			this.cards.set(cardNo,this.cards.get(this.currentSize));
-			this.cards.set(currentSize--,card);
+		if (currentCard < DECK_SIZE ){
+			card = this.cards.get(currentCard++);
 		}
 		return card;
 	}
