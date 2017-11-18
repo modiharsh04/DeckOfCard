@@ -6,7 +6,7 @@ public class Game{
 
 	public Game(){
 		in = new Scanner(System.in);
-		this.deck = DeckOfCards.getDeck();
+		this.deck = new DeckOfCards();
 	}
 
 	public void startGame(){

@@ -2,18 +2,11 @@ import java.util.*;
 
 public class DeckOfCards{
 	public static final int DECK_SIZE = 52;
-	private static DeckOfCards deck = null;
-
-	public static DeckOfCards getDeck(){
-		if (deck == null)
-			deck = new DeckOfCards();
-		return deck;
-	}
 
 	private List<Card> cards;
 	private int currentCard = 0;
 
-	private DeckOfCards(){
+	public DeckOfCards(){
 		cards = new ArrayList<>(DECK_SIZE);
 		this.createDeck();
 	}

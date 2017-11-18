@@ -8,7 +8,7 @@ import java.util.*;
 public class DeckTest {
     @Test(timeout = 20000)
     public void testDeckFiftyTwoDiffVal() {
-    	DeckOfCards deck = DeckOfCards.getDeck();
+    	DeckOfCards deck = new DeckOfCards();
     	checkDeck(deck);
     	testShuffle(deck);
     }

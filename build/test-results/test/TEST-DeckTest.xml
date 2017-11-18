@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="DeckTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-11-18T20:21:06" hostname="MODI-Laptop" time="0.005">
+<testsuite name="DeckTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-11-18T20:49:31" hostname="MODI-Laptop" time="0.009">
   <properties/>
-  <testcase name="testDeckFiftyTwoDiffVal" classname="DeckTest" time="0.005"/>
+  <testcase name="testDeckFiftyTwoDiffVal" classname="DeckTest" time="0.009"/>
   <system-out><![CDATA[Deck shuffled...
 Deck shuffled...
 ]]></system-out>
